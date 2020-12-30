@@ -5,7 +5,9 @@ plugins {
     id 'kotlin-kapt'
 }
 
-
+androidExtensions {
+    experimental = true
+}
 
 android {
     compileSdkVersion 30
@@ -50,6 +52,9 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
 
     testImplementation "io.mockk:mockk:1.10.4"
+
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+
 
 
     //noinspection GradleCompatible,GradleCompatible

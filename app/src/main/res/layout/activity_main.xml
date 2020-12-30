@@ -7,6 +7,12 @@
     android:padding="@dimen/spacing_normal"
     tools:context=".presentation.main.MainActivity">
 
+    <androidx.recyclerview.widget.RecyclerView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/andVersionRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/login_input_layout"
         android:layout_width="match_parent"

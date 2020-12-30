@@ -3,6 +3,7 @@ package com.example.android4a.presentation.main
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.android4a.R
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.android.synthetic.main.activity_main.*
@@ -34,4 +35,13 @@ class MainActivity : AppCompatActivity() {
             mainViewModel.onClickedLogin(login_edit.text.toString().trim(), password_edit.text.toString())
         }
     }
+
+    val items = arrayOf(AndVersion("test1"), AndVersion("test2"))
+
+
+    fun onCreate(){
+        andVersionRecyclerView.layoutManager = LinearLayoutManager(this)
+        andVersionRecyclerView.adapter = AndVersionAdapter(items)
+    }
+
 }
